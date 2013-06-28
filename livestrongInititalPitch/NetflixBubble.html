@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Livestrong circle chart</title>
+    <script src="http://d3js.org/d3.v2.min.js?2.9.3"></script>
+    <script type="text/javascript" src="d3.js"></script>
+    <!-- <script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?1.25.0"></script> -->
+    <script type="text/javascript" src="d3.layout.js"></script>
+    <script type="text/javascript" src="jquery-1.6.2.min.js"></script> 
+	<script type="text/javascript" src="jquery.tipsy.js"></script>
+	<link href="tipsy.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    
+    <!-- <link type="text/css" rel="stylesheet" href="stylePH.css"/> -->
+	
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+    
+    	    /*d3 CSS */
+
+    circle.child {
+		stroke: #B9090B;
+	}
+	text {
+	  	font-size: 11px;
+	  	pointer-events: none;
+	}
+
+	text.parent {
+	  	fill: black;
+	  	/* font-size: .4em; */
+	 	font-size: 0;
+	}
+
+	circle {
+	  	fill: #f2f2f2;
+	  	stroke: #B9090B;
+	  	pointer-events: all;
+	}
+
+	circle.parent {
+	  	/* fill: #ffff00; */
+	  	fill: #3b3b3b;
+	  	fill-opacity: .2;
+	  	stroke: #B9090B;
+	}
+
+	circle.parent:hover {
+	 	stroke: white;
+	  	stroke-width: .5px;
+	}
+/*
+	circle.child {
+		stroke: #ffff00;
+		pointer-events: none;
+		stroke-opacity: 1;
+	}
+*/
+
+  /*Other CSS*/
+    
+    #logo {
+    	margin-top : 20px;
+    	margin-bottom : 10px;
+    }
+    body {
+        padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+      #header {
+      	padding-top: 20px;
+    }
+      #nav {
+      	padding-top : 0px;
+      	padding-bottom : 0px;
+    }
+      #partition {
+      	margin-top : 0px;
+    }
+      #desc {
+      	padding-top: 5px;
+      	padding-bottom : 0px;
+    }
+      .footer {
+      	padding-top: 30px;
+    }
+    #stophover {
+    	background-color: transparent;
+	}
+	#stophover2 {
+		text-align: center;
+		background-color: transparent;
+	}
+ 	li.disabled {
+ 		color : #AAAAAA;
+ 		text-decoration : none;
+ 	}
+	#alignplease {
+		position : relative;
+	}
+	.nav .nav-pills .pull-right {
+	position : absolute;
+	bottom : 0;
+ 	}
+ 	.nav > li.disabled {
+		color: grey;
+  		pointer-events: none;
+	}
+	.nav > li.disabled > a:hover {
+	  	cursor: default;
+	  	text-decoration: none;
+	  	background-color: inherit;
+	}
+	.btn-group {
+		float : right;
+		padding-bottom : 30px;
+	}
+ 	
+    </style>
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+<div class="container" id="app">
+  <div class="row">
+    <div class="span12">
+    
+      <h1 id="logo">
+        <a href="http://www.livestrong.org/"> <img src="logo.png"/>
+        </a>
+      </h1>
+    </div>
+  </div>
+  
+  <div class="container">
+  	<div id = "alignplease">
+			
+      <h3 id = "header">Topics nested</h3>
+      <p id = "desc"> This circle-packing visual shows clicks based on circle size of the main navbar.<br> You can hover over each parent circle to see the name of each, as well as click tosee a zoomed in view. Data table is below</p>
+	</div>  
+
+	<div class="btn-group">
+		<a class="btn" href="#"><i class="icon-list-alt icon-red"></i> More Tabs </a>
+  		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		  
+		  <!--
+		  <li><a href="StanfordHospitalSitemap4Dropdown.html">Sitemap Traffic</a></li>
+		  <li><a href="StanfordHospitalNetwork.html">Network</a></li> -->
+		  <li><a href="#">other pages</a></li> 
+		  <li class="divider"></li>
+		  <li><a href="test.xls"><i class="icon-file"></i>Export to Excel</a></li>
+		</ul>
+		
+	</div>	
+		
+ 
+  
+ </div> <!-- /container -->
+
+    <div class="visual">
+    	<div id="viz"></div>
+    	<script src="NetflixBubble.js" type="text/javascript"></script>
+    	
+		<!--<aside><a href="partitionStanford.html" target="_blank">Open in a new window.</a></aside> -->
+    </div>
+
+
+	<div class="row">
+
+        <div class="span12">
+    
+          
+          <table class = "table">
+          	
+          <hr>
+	<section id="tfa">
+	<h3>Topic/keyword table data</h3>
+	<table class="table table-striped table-hover">
+		<!-- INSERT TABLE HERE -->
+		
+		<thead> 
+	<tr> 
+		<th>Parent</th> 
+		<th>Child</th> 
+		<th>Posts</th> 
+	</tr> 
+  </thead> 
+  <tbody> 
+	<tr> 
+		<td>Livestrong</td> 
+		<td>Cancer</td> 
+		<td>42,200</td> 
+	</tr> 
+	<!--
+	<tr> 
+		<td></td> 
+		<td>Centers of Excellence</td> 
+		<td>5,826</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Medical Sevices</td> 
+		<td>19,255</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Request an Appointment</td> 
+		<td>13,901</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>For Patients & Visitors</td> 
+		<td>90,388</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>For Health Professionals</td> 
+		<td>30,547</td> 
+	</tr> 
+	<tr> 
+		<td>Find a Physician</td> 
+		<td>need to clarify</td> 
+		<td>194,275</td> 
+	</tr> 
+	<tr> 
+		<td>Quality</td> 
+		<td>Awards & Recognition</td> 
+		<td>3,245</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>What Is Quality?</td> 
+		<td>3,437</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Detailed Quality Data</td> 
+		<td>2,585</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Department Leadership</td> 
+		<td>7,630</td> 
+	</tr> 
+	<tr> 
+		<td>Health Information</td> 
+		<td>Overview</td> 
+		<td>12,931</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Stanford Health Publications</td> 
+		<td>3,848</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>E-books</td> 
+		<td>2,362</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Calendar of Events</td> 
+		<td>7,142</td> 
+	</tr> 
+	<tr> 
+		<td>Newsroom</td> 
+		<td>News Releases</td> 
+		<td>2,132</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Media Coverage</td> 
+		<td>3,816</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Social Media</td> 
+		<td>1,402</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Video Archive</td> 
+		<td>1,372</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>For Journalists</td> 
+		<td>315</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Publications</td> 
+		<td>779</td> 
+	</tr> 
+	<tr> 
+		<td>Maps and Directions</td> 
+		<td>Our Location & Maps</td> 
+		<td>46,318</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Airport Information</td> 
+		<td>3,997</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Public Transportation</td> 
+		<td>2,909</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Inside the Hospital</td> 
+		<td>13,507</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Emergency Department</td> 
+		<td>11,380</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>For the Disabled</td> 
+		<td>1,103</td> 
+	</tr> 
+	<tr> 
+		<td>About Us</td> 
+		<td>Administration</td> 
+		<td>23,470</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Bondholder and General Financial Information</td> 
+		<td>856</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Public Services and Community Partnerships</td> 
+		<td>2,716</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Our History</td> 
+		<td>4,965</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Contact</td> 
+		<td>77,480</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>Facts</td> 
+		<td>6,388</td> 
+	</tr> 
+	<tr> 
+		<td></td> 
+		<td>FAQ</td> 
+		<td>7,602</td> 
+	</tr> 
+-->
+</tbody> 
+			
+		<!-- ENDS -->
+	</table>
+	</section>
+          	
+          </table>
+
+
+
+
+	<footer class="footer">
+	  <div class="row">
+	    <div class="span12">
+	      <table class="table table-bordered">
+	        <tr>
+	          <td id="stophover"><img src = "RGA.png" height = "20px" width ="50px"/> San Francisco Analytics Department, 2013.</td>
+	          <td id="stophover2"><a href="http://www.rga.com/" class="center">About</a></td>
+	        </tr>
+	      </table>
+	    </div>
+	  </div>
+	</footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-button.js"></script>
+    <script src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

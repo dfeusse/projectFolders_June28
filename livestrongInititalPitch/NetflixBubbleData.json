@@ -1,0 +1,53 @@
+{
+	"name": "Netflix",
+		"children": [
+			{"name": "Drama", 
+				"children": [
+					{"name": "House of Cards", "size": 164506},
+					{"name": "Breaking Bad", "size": 161239},
+					{"name": "Walking Dead", "size": 157139},
+					{"name": "Lost", "size": 131156},
+					{"name": "Weeds", "size": 99691},
+					{"name": " 30 for 30", "size": 94769},
+					{"name": "American Horror Story", "size": 37773},
+					{"name": "Sons of Anarchy", "size": 36501},
+					{"name": "Law and Order", "size": 29176},
+					{"name": "Mad Men", "size": 28253},
+					{"name": "Sherlock", "size": 25045},
+					{"name": "The West Wing", "size": 22196},
+					{"name": "Downton Abbey", "size": 17757},
+					{"name": "Game of Thrones", "size": 10016},
+					{"name": "Firefly", "size": 9457},
+					{"name": "The Following", "size": 8500},
+					{"name": "Alias", "size": 5645},
+					{"name": "The Killing", "size": 2012},
+					{"name": "Battlestar Gallactica", "size": 349}
+				]
+			},
+			{"name": "Comedy", 
+				"children": [
+					{"name": "Arrested Development", "size": 125581},
+					{"name": "Workaholics", "size": 80235},
+					{"name": "How I Met Your Mother", "size": 69937},
+					{"name": "Family Guy", "size": 51367},
+					{"name": "The Office", "size": 48767},
+					{"name": "Spongebob Squarepants", "size": 33736},
+					{"name": "South Park", "size": 30884},
+					{"name": "Always Sunny in Philadelphia", "size": 27419},
+					{"name": "Freaks and Geeks", "size": 23828},
+					{"name": "The League", "size": 17718},
+					{"name": "Archer", "size": 17197},
+					{"name": "Louie", "size": 13649},
+					{"name": "30 Rock", "size": 11324},
+					{"name": "Futurama", "size": 10753},
+					{"name": "Wilfred", "size": 10292},
+					{"name": "Big Bang Theory", "size": 9940},
+					{"name": "Portlandia", "size": 9740},
+					{"name": "American Dad", "size": 9576},
+					{"name": "Parks and Recreation", "size": 7978},
+					{"name": "Bobs Burgers", "size": 6035},
+					{"name": "Undeclared", "size": 3085}
+				]
+			}
+		]
+	}

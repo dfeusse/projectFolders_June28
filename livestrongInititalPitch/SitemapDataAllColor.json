@@ -1,0 +1,185 @@
+{
+	"name": "StanfordHospital.org",
+		"children": [
+			{"name": "Clinical Services", 
+				"children": [
+					{"name": "Clinics & Service Directory", "size": 9452},
+					{"name": "Centers of Excellence", 
+						"children": [
+							{"name": "COE, Parent", "size": 5826, "pone": "Y"},
+							{"name": "Surgical Services",
+								"children": [
+									{"name": "General Surgery - Bariatric Surgery",
+										"children": [
+											{"name": " BMI Calculator", "size": 219729},
+											{"name": "Treatment", "size": 66643},
+											{"name": "Obesity - Effects", "size": 37220},
+											{"name": "Bariatric Surgery, Parent", "size": 29662}
+										]
+									},
+									{"name": "Vascular Surgery, Patient Education - Peripher", "size": 9877
+									}
+								]
+							},
+							{"name": "Neuro",
+								"children": [
+									{"name": "Stroke - Stroke Month", "size": 42293},
+									{"name": "Moyamoya Disease", "size": 11298},
+									{"name": "Brain Tumor", "size": 17365}
+								]
+							},
+							{"name": "Transplant",
+								"children": [
+									{"name": "Kidney", "size": 41119},
+									{"name": "Liver", "size": 37689}
+								]
+							},
+							{"name": "Heart - Conditions",
+								"children": [
+									{"name": "Marfan", "size": 20067},
+									{"name": "Primary Amyloidosis", "size": 13076},
+									{"name": "Heart Transplant", "size": 13017},
+									{"name": "Arrhythmia", "size": 12318},
+									{"name": "Amyloid Learning", "size": 9341}
+								]
+							},
+							{"name": "Orthopaedics",
+								"children": [
+									{"name": "Orthopaedics, Parent", "size": 10969, "pone": "Y"},
+									{"name": "Spine Center", "size": 8266}
+								]
+							},
+							{"name": "Cyberknife",
+								"children": [
+									{"name": "Cyberknife, Parent", "size": 9872, "pone": "Y"},
+									{"name": "Stanford Cyberknife", "size": 13406}
+								]
+							}
+						]
+					},
+					{"name": "Medical Services", "size": 19255},
+					{"name": "Request an Appointment", "size": 13901},
+					{"name": "For Patients & Visitors", "size": 90388}
+
+				]
+			},
+			
+			{"name": "Find a Physician", "header": "", "size": 194275
+			
+			},
+
+			{"name": "Quality",
+				"children": [
+					{"name": "Awards & Recognition", "size": 3245},
+					{"name": "What is Quality?", 
+						"children": [
+							{"name": "Initiatives", 
+								"children": [
+									{"name": "Initiatives, Parent", "size": 3501, "pone": "Y"},
+									{"name": "Best Practices", "size": 777},
+									{"name": "Satisfaction", "size": 554},
+									{"name": "Saving Lives", "size": 475}
+								]
+							},
+							{"name": "What is Quality, Parent", "size": 3437, "pone": "Y"},
+							{"name": "Measuring Quality", "size": 1532},
+							{"name": "Resources", "size": 615}
+						]
+					},
+					{"name": "Detailed Quality Data", "size": 2585},
+					{"name": "Department Leadership", "size": 7630}
+				]
+			},
+			{"name": "Health Information",
+				"children": [
+					{"name": "Overview", "size": 12931},
+					{"name": "Stanford Health Publications", "size": 3848},
+					{"name": "E-books", "size": 2362},
+					{"name": "Calendar of Events", "size": 7142}
+				]
+			},
+			{"name": "Newsroom", 
+				"children": [
+					{"name": "News Releases",
+						"children": [
+							{"name": "US News World Report", "size": 31013},
+							{"name": "News Releases, Parent", "size": 12623, "pone": "Y"},
+							{"name": "Headache Clinic", "size": 7458},
+							{"name": "Corporate Partners", "size": 6563},
+							{"name": "IVC Filter Removal Laser", "size": 6128},
+							{"name": "Medical Records Update", "size": 5462},
+							{"name": "Brain Tumor", "size": 4878},
+							{"name": "Nataly Kuznetsov", "size": 4732}
+						]
+					},
+					{"name": "Media Coverage", "size": 3816},
+					{"name": "Social Media", "size": 1402},
+					{"name": "Video Archive", "size": 1372},
+					{"name": "For Journalists", "size": 315},
+					{"name": "Publications", 
+						"children": [
+							{"name": "Discover Newsletters", "size": 2372},
+							{"name": "Newsletters, Parent", "size": 779, "pone": "Y"},
+							{"name": "Health Notes",
+								"children": [
+									{"name": "Health Notes, Parent", "size": 1526, "pone": "Y"},
+									{"name": "Surviving a Stroke", "size": 2199},
+									{"name": "Womens Heart", "size": 2113},
+									{"name": "Sarcoma Surgery", "size": 1407},
+									{"name": "Lungs Transplantation", "size": 995},
+									{"name": "Scleroderma", "size": 955},
+									{"name": "DVT Treatment", "size": 947},
+									{"name": "Video Assisted Thoracic Surgery", "size": 793},
+									{"name": "Brain Tumor Center", "size": 790},
+									{"name": "Stroke Center", "size": 770},
+									{"name": "Neurosurgery Spine", "size": 702},
+									{"name": "Cyberknife A Powerful Weapon", "size": 700}
+								]
+							}
+						]
+					}
+				]
+			},
+			{"name": "Maps and Directions", 
+				"children": [
+					{"name": "Our Location & Maps", 
+						"children": [
+							{"name": "Maps, Parent", "size": 46318, "pone": "Y"},
+							{"name": "SHC", "size": 24141},
+							{"name": "BW", "size": 8916},
+							{"name": "LPCH", "size": 4507},
+							{"name": "Boswell", "size": 3253},
+							{"name": "Psychiatry", "size": 2088},
+							{"name": "Medical Plaza", "size": 1464},
+							{"name": "Hoover Pavilion", "size": 1300}
+						]
+					},
+					{"name": "Airport Information", "size": 3997},
+					{"name": "Public Transportation", "size": 2909},
+					{"name": "Inside the Hospital", "size": 13507},
+					{"name": "Emergency Department", "size": 11380},
+					{"name": "For the Disabled", "size": 1103}
+				]
+			},
+			{"name": "About Us",
+				"children": [
+					{"name": "Administration", "size": 23470},
+					{"name": "Bondholder and General Financial Information", 
+						"children": [
+							{"name": "Disclaimer", "size": 1406},
+							{"name": "Treasury, Parent", "size": 856, "pone": "Y"},
+							{"name": "Annual", "size": 542},
+							{"name": "Statements", "size": 217},
+							{"name": "Continuing", "size": 214},
+							{"name": "Ratings", "size": 134}
+						]
+					},
+					{"name": "Public Services and Community Partnerships", "size": 2716},
+					{"name": "Our History", "size": 4965},
+					{"name": "Contact", "size": 77480},
+					{"name": "Facts", "size": 6388},
+					{"name": "FAQ", "size": 7602}
+				] 
+			}
+					]
+}
